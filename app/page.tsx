@@ -5,7 +5,6 @@ import Image from "next/image";
 
 export default function Home() {
   const [message, setMessage] = useState("Loading...");
-  console.log("NEXT_PUBLIC_API_URL:", process.env.NEXT_PUBLIC_API_URL);
 
   useEffect(() => {
     fetch(`${process.env.NEXT_PUBLIC_API_URL}/hello`)

@@ -7,6 +7,8 @@ export default function Home() {
   const [message, setMessage] = useState("Loading...");
 
   useEffect(() => {
+    console.log("NEXT_PUBLIC_API_URL:", process.env.NEXT_PUBLIC_API_URL);
+
     fetch(`${process.env.NEXT_PUBLIC_API_URL}/hello`)
       .then(async res => {
         const text = await res.text();

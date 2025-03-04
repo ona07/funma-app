@@ -10,7 +10,6 @@ export default function Home() {
     fetch(`${process.env.NEXT_PUBLIC_API_URL}/hello`)
       .then(async res => {
         const text = await res.text();
-        console.log("Raw response:", text);  // 🔍 レスポンス内容を確認
         return JSON.parse(text);
       })
       .then(data => setMessage(data.message))

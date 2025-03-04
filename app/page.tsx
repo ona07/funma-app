@@ -8,7 +8,7 @@ export default function Home() {
   console.log("NEXT_PUBLIC_API_URL:", process.env.NEXT_PUBLIC_API_URL);
 
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/hello`)
+    fetch(`https://funma-app-backend.onrender.com/hello`)
       .then(async res => {
         const text = await res.text();
         console.log("Raw response:", text);  // 🔍 レスポンス内容を確認

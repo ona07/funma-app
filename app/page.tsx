@@ -7,7 +7,7 @@ export default function Home() {
   const [message, setMessage] = useState("Loading...");
 
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/hello`)
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/hello`)
       .then(res => res.json())
       .then(data => setMessage(data.message))
       .catch(err => {
